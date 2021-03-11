@@ -1,0 +1,46 @@
+<cpl xmlns="urn:ietf:params:xml:ns:cpl" xmlns:taa="http://www.tandberg.net/cpl-extensions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:ietf:params:xml:ns:cpl cpl.xsd">
+<taa:routed>
+<!--
+ This CPL is intended to block scans / call attempts from asterisk@.* and 100@1.1.1.1 
+-->
+<!-- changes / addons might be needed in your setup -->
+<taa:rule-switch>
+<taa:rule destination=".*" unauthenticated-origin="asterisk@.*">
+<reject status="403"/>
+</taa:rule>
+<taa:rule destination=".*" unauthenticated-origin="100@1.1.1.1">
+<reject status="403"/>
+</taa:rule>
+<taa:rule destination=".*" unauthenticated-origin="unused@.*">
+<reject status="403"/>
+</taa:rule>
+<taa:rule destination=".*" unauthenticated-origin="194.28.113.35">
+<reject status="403"/>
+</taa:rule>
+<taa:rule destination=".*" unauthenticated-origin="cisco">
+<reject status="403"/>
+</taa:rule>
+<taa:rule destination=".*" unauthenticated-origin="448099999999@193.200.45.133">
+<reject status="403"/>
+</taa:rule>
+<taa:rule destination=".*" unauthenticated-origin="448099999999@46.163.84.134">
+<reject status="403"/>
+</taa:rule>
+<taa:rule destination=".*" unauthenticated-origin="448099999999@74.86.64.6">
+<reject status="403"/>
+</taa:rule>
+<taa:rule destination=".*" unauthenticated-origin="448099999999@.*">
+<reject status="403"/>
+</taa:rule>
+<taa:rule destination=".*" unauthenticated-origin="90001@ooredoo.com">
+<reject status="403"/>
+</taa:rule>
+<taa:rule destination=".*" unauthenticated-origin="iwf@86.62.220.8">
+<reject status="403"/>
+</taa:rule>
+<taa:rule destination=".*" unauthenticated-origin="NoAuth@mannai.com.qa">
+<reject status="403" reason="Denied by policy"/>
+</taa:rule>
+</taa:rule-switch>
+</taa:routed>
+</cpl>
