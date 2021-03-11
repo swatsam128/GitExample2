@@ -36,7 +36,7 @@
 <reject status="403"/>
 </taa:rule>
 <taa:rule destination=".*" unauthenticated-origin="iwf@86.62.220.8">
-<reject status="403"/>
+<reject status="403 FORBIDDEN"/>
 </taa:rule>
 <taa:rule destination=".*" unauthenticated-origin="NoAuth@mannai.com.qa">
 <reject status="403" reason="Denied by policy"/>
